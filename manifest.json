@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "colors",
+	"version": "0.1",
+	"description": "customize colors of background and text",
+	"browser_action":
+	{
+		"default_icon": "icon.png"
+	},
+	"options_page": "options.html",
+	"permissions":
+	[
+		"storage"
+	],
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["colors.js"],
+			"run_at": "document_end"
+		}
+	]
+}
